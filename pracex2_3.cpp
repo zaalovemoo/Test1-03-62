@@ -2,18 +2,28 @@
 #include<ctime>
 #include<cstdlib>
 using namespace std;
+char table[8][8];
 
-void showTable(char);
+void showTable();
 void randomTable(char);
 
 int main(){
-	int table[8][8]
+for(int i=0;i<8;i++){
+	for(int j=0;j<8;j++){
+	table[i][j]='A'+i+j;
+	}
+}
+for (int i=0;i<8;i++){
+	for(int j=0;j<8;j++){
+	randomTable(table[i][j]);
+}
+}
+	
 	srand(time(0));	
-	randomTable(table);
-	showTable(table);
+	showTable();
 }
 
-void showTable( table[][8]){
+void showTable(){
 	for(int i = 0; i < 8; i++){
 		for(int j = 0; j < 8; j++){
 			cout << table[i][j] << " ";
@@ -21,10 +31,11 @@ void showTable( table[][8]){
 		cout << "\n";
 	}
 }
-void randomTable(char table[8][8]){
-	for(int i=0;i<8;i++){
-		for(int j=0;j<8;j++)
-			table[i][j]=rand()%25;
-	}
+
+void randomTable(char table){
+	table=
 }
+
+	
+
 
